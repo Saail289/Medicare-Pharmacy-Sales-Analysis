@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href = "image.png">
+  <title>Medicare</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #ECF87F;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      transform-origin: 50% 50%; /* Set the transform origin for scaling effect */
+      animation: labelScale 0.3s ease-out; /* Added animation effect */
+    }
+
+    @keyframes labelScale {
+      from {
+        transform: scale(0); /* Start with zero scale */
+        opacity: 0; /* Start with zero opacity */
+      }
+      to {
+        transform: scale(1); /* End with full scale */
+        opacity: 1; /* End with full opacity */
+      }
+    }
+
+    label:hover {
+      color: #00de29;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      background-color: #4caf50;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #e02500e8;
+    }
+    img{
+      text-align: center;
+    }
+    h1{
+      text-align: center;
+      color:#4caf50;
+    }
+    h4{
+      text-align: center;
+      color:#4caf50;
+    }
+  </style>
+</head>
+<body>
+  <form action="/submitData" method="post">
+  
+    <h1>Medicare</h1>
+    <h4>[Ghatkopar Branch]</h4>
+    <label for="name">Customer Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="productName">Product Name:</label>
+    <input type="text" id="productName" name="productName" required>
+
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="mobileNumber">Mobile Number:</label>
+    <input type="tel" id="mobileNumber" name="mobileNumber" pattern="[0-9]{10}" required>
+
+    <label for="pincode">Pincode:</label>
+    <input type="text" id="pincode" name="pincode" pattern="[0-9]{6}" required>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
